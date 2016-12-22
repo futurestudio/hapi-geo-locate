@@ -3,7 +3,7 @@ const Code = require('code');
 const Hapi = require('hapi');
 
 const server = new Hapi.Server();
-server.connection({ port: 3000 });
+server.connection({port: 3000});
 
 const lab = exports.lab = Lab.script();
 
@@ -36,7 +36,7 @@ lab.experiment('hapi-geo-locate register plugin', function () {
       const payload = JSON.parse(response.payload || '{}');
 
       Code.expect(response.statusCode).to.equal(200);
-      Code.expect(Object.keys(payload)).to.contain([ 'ip']);
+      Code.expect(Object.keys(payload)).to.contain(['ip']);
 
       done();
     });
