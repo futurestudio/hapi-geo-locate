@@ -1,0 +1,32 @@
+{
+  "name": "hapi-geo-locate",
+  "description": "Provide geo location for incoming requests in hapi",
+  "version": "0.1.0",
+  "author": "Future Studio <info@futurestud.io>",
+  "bugs": {
+    "url": "https://github.com/fs-opensource/hapi-geo-locate/issues"
+  },
+  "dependencies": {
+    "ipinfo": "~1.3.3"
+  },
+  "devDependencies": {
+    "code": "~4.0.0",
+    "hapi": "~16.0.2",
+    "lab": "~11.2.1"
+  },
+  "homepage": "https://github.com/fs-opensource/hapi-geo-locate#readme",
+  "keywords": [
+    "geo-location",
+    "hapi",
+    "plugin"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fs-opensource/hapi-geo-locate.git"
+  },
+  "scripts": {
+    "test": "lab --assert code --leaks"
+  }
+}
