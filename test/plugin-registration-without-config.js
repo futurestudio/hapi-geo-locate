@@ -20,20 +20,19 @@ experiment('hapi-geo-locate register plugin', function () {
     });
 
     test('test if the plugin works without any options', function (done) {
-
-        const NO_OPTIONS = {
+        const routeOptions = {
             path: '/NO_OPTIONS',
             method: 'GET',
             handler: function (request, reply) {
                 reply(request.location);
             }
-        }
+        };
 
-        server.route(NO_OPTIONS)
+        server.route(routeOptions);
 
         const options = {
-            url: NO_OPTIONS.path,
-            method: NO_OPTIONS.method
+            url: routeOptions.path,
+            method: routeOptions.method
         };
 
         server.inject(options, function (response) {
@@ -46,4 +45,36 @@ experiment('hapi-geo-locate register plugin', function () {
         });
     });
 
+    test('test if the plugin disables when passing plugin config on route', function (done) {
+        const routeOptions = {
+            path: '/DISABLED',
+            method: 'GET',
+            handler: function (request, reply) {
+                reply(request.location);
+            },
+            config: {
+                plugins: {
+                    hapiGeoLocate: {
+                        enabled: false
+                    }
+                }
+            }
+        };
+
+        server.route(routeOptions);
+
+        const options = {
+            url: routeOptions.path,
+            method: routeOptions.method
+        };
+
+        server.inject(options, function (response) {
+            const payload = JSON.parse(response.payload || '{}');
+
+            Code.expect(response.statusCode).to.equal(200);
+            Code.expect(payload).to.be.empty();
+
+            done();
+        });
+    });
 })
