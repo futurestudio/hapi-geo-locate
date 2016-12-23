@@ -26,10 +26,10 @@ experiment('hapi-geo-locate register plugin', () => {
         });
     });
 
-    test('test if the plugin disables with options during registration', (done) => {
+    test('test if the plugin works without route options', (done) => {
 
         const routeOptions = {
-            path: '/NO_OPTIONS',
+            path: '/no-options',
             method: 'GET',
             handler: (request, reply) => {
                 reply(request.location);
@@ -54,10 +54,10 @@ experiment('hapi-geo-locate register plugin', () => {
         });
     });
 
-    test('test if the plugin disables enables when passing plugin config on route', (done) => {
+    test('test if the plugin disables when activating plugin config on route', (done) => {
 
         const routeOptions = {
-            path: '/DISABLED',
+            path: '/with-options',
             method: 'GET',
             handler: (request, reply) => {
                 reply(request.location);
@@ -83,7 +83,7 @@ experiment('hapi-geo-locate register plugin', () => {
             const payload = JSON.parse(response.payload || '{}');
 
             Code.expect(response.statusCode).to.equal(200);
-            Code.expect(Object.keys(payload)).to.be.undefined();
+            Code.expect(Object.keys(payload)).to.be.empty();
 
             done();
         });
