@@ -31,7 +31,7 @@ server.route({
 ## Plugin Registration Options
 The following plugin options allow you to customize the default behavior of `hapi-geo-locate`:
 
-- **disabledByDefault**: `(boolean)`, default: `false` — by default, the plugin geo locates the request by IP on every request
+- **enabledByDefault**: `(boolean)`, default: `true` — by default, the plugin geo locates the request by IP on every request
 
 ```
 server.register({

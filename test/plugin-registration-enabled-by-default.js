@@ -18,7 +18,7 @@ experiment('hapi-geo-locate register plugin', () => {
         server.register({
             register: require('../lib/index'),
             options: {
-                disabledByDefault: false
+                enabledByDefault: true
             }
         }, (err) => {
 
