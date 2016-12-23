@@ -1,3 +1,5 @@
+'use strict'
+
 const Lab = require('lab');
 const Code = require('code');
 const Hapi = require('hapi');
@@ -9,21 +11,24 @@ const lab = exports.lab = Lab.script();
 const experiment = lab.experiment;
 const test = lab.test;
 
-experiment('hapi-geo-locate register plugin', function () {
+experiment('hapi-geo-locate register plugin', () => {
 
-    lab.before(function (done) {
+    lab.before((done) => {
+
         server.register({
             register: require('../lib/index')
-        }, function (err) {
+        }, (err) => {
+
             done(err);
         });
     });
 
-    test('test if the plugin works without any options', function (done) {
+    test('test if the plugin works without any options', (done) => {
+
         const routeOptions = {
             path: '/NO_OPTIONS',
             method: 'GET',
-            handler: function (request, reply) {
+            handler: (request, reply) => {
                 reply(request.location);
             }
         };
@@ -35,7 +40,8 @@ experiment('hapi-geo-locate register plugin', function () {
             method: routeOptions.method
         };
 
-        server.inject(options, function (response) {
+        server.inject(options, (response) => {
+
             const payload = JSON.parse(response.payload || '{}');
 
             Code.expect(response.statusCode).to.equal(200);
@@ -45,11 +51,12 @@ experiment('hapi-geo-locate register plugin', function () {
         });
     });
 
-    test('test if the plugin disables when passing plugin config on route', function (done) {
+    test('test if the plugin disables when passing plugin config on route', (done) => {
+
         const routeOptions = {
             path: '/DISABLED',
             method: 'GET',
-            handler: function (request, reply) {
+            handler: (request, reply) => {
                 reply(request.location);
             },
             config: {
@@ -68,11 +75,12 @@ experiment('hapi-geo-locate register plugin', function () {
             method: routeOptions.method
         };
 
-        server.inject(options, function (response) {
+        server.inject(options, (response) => {
+
             const payload = JSON.parse(response.payload || '{}');
 
             Code.expect(response.statusCode).to.equal(200);
-            Code.expect(payload).to.be.empty();
+            Code.expect(payload).to.be.undefined();
 
             done();
         });
