@@ -2,10 +2,23 @@
 A hapi plugin to geo locate requests by IP and provide `request.location` in your route handlers. The plugin uses [ipinfo.io](http://ipinfo.io/) for the IP geo location.
 
 
+## Requirements
+The plugin is written in ES2016, please use **Node.js v4 or later**.
+
+
+## Installation
+Add `hapi-geo-locate` as a dependency to your project:
+
+```bash
+npm i -S hapi-geo-locate
+# you’re using NPM shortcuts to (i)nstall and (-S)ave the module as a dependency
+```
+
+
 ## Usage
 The most straight forward way to register the `hapi-geo-locate` plugin: 
 
-```
+```js
 server.register(require('hapi-geo-locate'), (err) => {
     if (err) {
         // handle plugin registration error
@@ -33,7 +46,7 @@ The following plugin options allow you to customize the default behavior of `hap
 
 - **enabledByDefault**: `(boolean)`, default: `true` — by default, the plugin geo locates the request by IP on every request
 
-```
+```js
 server.register({
     require('hapi-geo-locate'),
     options: {
@@ -62,7 +75,7 @@ The following plugin options allow you to customize the behavior of `hapi-geo-lo
 
 The plugin configuration can be customized using the `hapiGeoLocation` (plugin name in camelCase) key:
 
-```
+```js
 server.register({
     require('hapi-geo-locate'),
     options: {
