@@ -1,7 +1,7 @@
 {
   "name": "hapi-geo-locate",
   "description": "Provide IP geo location for incoming requests in hapi",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "Future Studio <info@futurestud.io>",
   "bugs": {
     "url": "https://github.com/fs-opensource/hapi-geo-locate/issues"
