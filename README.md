@@ -50,7 +50,7 @@ The following plugin options allow you to customize the default behavior of `hap
 server.register({
     require('hapi-geo-locate'),
     options: {
-        disabledByDefault: true
+        enabledByDefault: true
     }
 }, (err) => {
     // …
@@ -68,7 +68,7 @@ server.route({
 ```
 
 
-# Plugin Route Handler Options
+## Plugin Route Handler Options
 The following plugin options allow you to customize the behavior of `hapi-geo-locate` on individual route handlers:
 
 - **enabled**: `(boolean)` — tells the plugin to enable (`true`) or disable (`false`) geo location for the request by IP
@@ -79,7 +79,7 @@ The plugin configuration can be customized using the `hapiGeoLocation` (plugin n
 server.register({
     require('hapi-geo-locate'),
     options: {
-        disabledByDefault: true
+        enabledByDefault: true
     }
 }, (err) => {
     // …
