@@ -117,7 +117,7 @@ Proxied IP addresses are prefered over the address found in `request.info.remote
 
 
 ## Feature Requests
-Do you miss a feature? Please don’t hesitate to [create an issue]() with a short description of your desired addition to this plugin.
+Do you miss a feature? Please don’t hesitate to [create an issue](https://github.com/fs-opensource/hapi-geo-locate/issues) with a short description of your desired addition to this plugin.
 
 
 ## Links & Resources
