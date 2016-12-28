@@ -1,6 +1,10 @@
 # hapi-geo-locate
 A hapi plugin to geo locate requests by IP and provide `request.location` in your route handlers. The plugin uses [ipinfo.io](http://ipinfo.io/) for the IP geo location.
 
+[![Build Status](https://travis-ci.org/fs-opensource/hapi-geo-locate.svg?branch=master)](https://travis-ci.org/fs-opensource/hapi-geo-locate)
+
+[![NSP Status](https://nodesecurity.io/orgs/future-studio/projects/41f5cf32-7bb6-43c9-9677-84c2c635de43/badge)](https://nodesecurity.io/orgs/future-studio/projects/41f5cf32-7bb6-43c9-9677-84c2c635de43)
+
 
 ## Requirements
 The plugin is written in ES2016, please use **Node.js v4 or later**.
@@ -123,6 +127,15 @@ Do you miss a feature? Please don’t hesitate to [create an issue](https://gith
 ## Links & Resources
 
 - [hapi tutorial series](https://futurestud.io/tutorials/hapi-get-your-server-up-and-running)
+
+
+## Contributing
+
+1.  Create a fork
+2.  Create your feature branch: `git checkout -b my-feature`
+3.  Commit your changes: `git commit -am 'Add some feature'`
+4.  Push to the branch: `git push origin my-new-feature`
+5.  Submit a pull request 🚀
 
 
 ## License
