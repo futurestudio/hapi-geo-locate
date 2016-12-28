@@ -127,6 +127,7 @@ Do you miss a feature? Please don’t hesitate to [create an issue](https://gith
 ## Links & Resources
 
 - [hapi tutorial series](https://futurestud.io/tutorials/hapi-get-your-server-up-and-running)
+- [node-ipinfo](https://github.com/IonicaBizau/node-ipinfo): Node.js wrapper for the [ipinfo.io](http://ipinfo.io) API
 
 
 ## Contributing
