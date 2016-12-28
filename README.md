@@ -125,6 +125,10 @@ Do you miss a feature? Please don’t hesitate to [create an issue](https://gith
 - [hapi tutorial series](https://futurestud.io/tutorials/hapi-get-your-server-up-and-running)
 
 
+## License
+
+MIT © [Future Studio](https://futurestud.io)
+
 ---
 
 > [futurestud.io](https://futurestud.io) &nbsp;&middot;&nbsp;
