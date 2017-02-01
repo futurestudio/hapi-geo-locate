@@ -52,6 +52,7 @@ experiment('hapi-geo-locate detect client location with proxied request (x-forwa
 
             Code.expect(response.statusCode).to.equal(200);
             Code.expect(Object.keys(payload)).to.contain(['ip']);
+            Code.expect(payload.ip).to.equal('127.0.0.1');
 
             done();
         });
@@ -84,6 +85,7 @@ experiment('hapi-geo-locate detect client location with proxied request (x-forwa
             Code.expect(response.statusCode).to.equal(200);
             Code.expect(Object.keys(payload)).to.contain(['ip']);
             Code.expect(Object.keys(payload)).to.contain(['hostname']);
+            Code.expect(payload.ip).to.equal('8.8.8.8');
 
             done();
         });
@@ -116,6 +118,7 @@ experiment('hapi-geo-locate detect client location with proxied request (x-forwa
             Code.expect(response.statusCode).to.equal(200);
             Code.expect(Object.keys(payload)).to.contain(['ip']);
             Code.expect(Object.keys(payload)).to.contain(['hostname']);
+            Code.expect(payload.ip).to.equal('4.4.4.4');
 
             done();
         });
