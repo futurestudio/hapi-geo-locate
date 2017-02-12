@@ -1,7 +1,8 @@
 # Changelog
 
-## Version 1.1.1 (2017-02-xx)
-- improve tests for proxied requests and check explicitely for correct client IP address   
+## Version 1.1.1 (2017-02-12)
+- change extension point from `onPreHandler` to `onPreAuth` to determine the location before validation
+- improve tests for proxied requests and check explicitly for correct client IP address
 
 ## Version 1.1.0 (2017-02-01)
 - detect client IP if request goes through multiple proxies ([thank you Anton!](https://futurestud.io/tutorials/hapi-geo-locate-hapi-plugin-for-client-geo-location-by-future-studio#comment-3092108774))  
