@@ -50,7 +50,7 @@ The following plugin options allow you to customize the default behavior of `hap
 
 ```js
 server.register({
-    require('hapi-geo-locate'),
+    register: require('hapi-geo-locate'),
     options: {
         enabledByDefault: true
     }
@@ -79,7 +79,7 @@ The plugin configuration can be customized using the `hapiGeoLocation` (plugin n
 
 ```js
 server.register({
-    require('hapi-geo-locate'),
+    register: require('hapi-geo-locate'),
     options: {
         enabledByDefault: true
     }
