@@ -1,7 +1,7 @@
 # hapi-geo-locate
 A hapi plugin to geo locate requests by IP and provide `request.location` in your route handlers. The plugin uses [ipinfo.io](http://ipinfo.io/) for the IP geo location.
 
-[![Build Status](https://travis-ci.org/fs-opensource/hapi-geo-locate.svg?branch=master)](https://travis-ci.org/fs-opensource/hapi-geo-locate) [![NSP Status](https://nodesecurity.io/orgs/future-studio/projects/41f5cf32-7bb6-43c9-9677-84c2c635de43/badge)](https://nodesecurity.io/orgs/future-studio/projects/41f5cf32-7bb6-43c9-9677-84c2c635de43)
+[![Build Status](https://travis-ci.org/fs-opensource/hapi-geo-locate.svg?branch=master)](https://travis-ci.org/fs-opensource/hapi-geo-locate) [![NSP Status](https://nodesecurity.io/orgs/future-studio/projects/41f5cf32-7bb6-43c9-9677-84c2c635de43/badge)](https://nodesecurity.io/orgs/future-studio/projects/41f5cf32-7bb6-43c9-9677-84c2c635de43) [![Known Vulnerabilities](https://snyk.io/test/github/fs-opensource/hapi-geo-locate/badge.svg)](https://snyk.io/test/github/fs-opensource/hapi-geo-locate)
 
 
 ## Requirements
