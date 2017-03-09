@@ -7,7 +7,7 @@ A hapi plugin to geo locate requests by IP and provide `request.location` in you
 
 
 ## Requirements
-The plugin is written in ES2016, please use **Node.js v4 or later**.
+The plugin is written in ES2015, please use **Node.js v4 or later**.
 
 
 ## Installation
