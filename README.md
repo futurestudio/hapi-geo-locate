@@ -1,9 +1,10 @@
 # hapi-geo-locate
 A hapi plugin to geo locate requests by IP and provide `request.location` in your route handlers. The plugin uses [ipinfo.io](http://ipinfo.io/) for the IP geo location.
 
-[![Build Status](https://travis-ci.org/fs-opensource/hapi-geo-locate.svg?branch=master)](https://travis-ci.org/fs-opensource/hapi-geo-locate) 
-[![NSP Status](https://nodesecurity.io/orgs/future-studio/projects/41f5cf32-7bb6-43c9-9677-84c2c635de43/badge)](https://nodesecurity.io/orgs/future-studio/projects/41f5cf32-7bb6-43c9-9677-84c2c635de43) 
+[![Build Status](https://travis-ci.org/fs-opensource/hapi-geo-locate.svg?branch=master)](https://travis-ci.org/fs-opensource/hapi-geo-locate)
+[![NSP Status](https://nodesecurity.io/orgs/future-studio/projects/41f5cf32-7bb6-43c9-9677-84c2c635de43/badge)](https://nodesecurity.io/orgs/future-studio/projects/41f5cf32-7bb6-43c9-9677-84c2c635de43)
 [![Known Vulnerabilities](https://snyk.io/test/github/fs-opensource/hapi-geo-locate/badge.svg)](https://snyk.io/test/github/fs-opensource/hapi-geo-locate)
+[![hapi-geo-locate Version](https://img.shields.io/npm/v/hapi-geo-locate.svg)](https://www.npmjs.com/package/hapi-geo-locate)
 
 
 ## Requirements
@@ -20,14 +21,14 @@ npm i -S hapi-geo-locate
 
 
 ## Usage
-The most straight forward way to register the `hapi-geo-locate` plugin: 
+The most straight forward way to register the `hapi-geo-locate` plugin:
 
 ```js
 server.register(require('hapi-geo-locate'), (err) => {
     if (err) {
         // handle plugin registration error
     }
-    
+
     // went smooth like chocolate :)
 })
 
@@ -38,7 +39,7 @@ server.route({
     handler: (request, reply) => {
         const location = request.location
         // use client location
-        
+
         reply(request.location)
     }
 })
@@ -96,7 +97,7 @@ server.route({
     handler: (request, reply) => {
         const location = request.location
         // use the location
-        
+
         reply(location)
     },
     config: {
@@ -111,7 +112,7 @@ server.route({
 
 
 ## Supported Proxies
-Running your application behind a (reverse) proxy like nginx, the client’s IP address gets reset to localhost. You can pass the actual request IP to your app using a header. 
+Running your application behind a (reverse) proxy like nginx, the client’s IP address gets reset to localhost. You can pass the actual request IP to your app using a header.
 
 The current version supports the following proxies:
 
