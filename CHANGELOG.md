@@ -1,6 +1,9 @@
 # Changelog
 
 ## Version 1.1.2 (2017-03-24)
+- add logo 
+
+## Version 1.1.2 (2017-03-24)
 - add project badges for TravisCI, Snyk and NSP (both checking for dependency vulerabilities), NPM
 - `fix` wrong import code in README
 - `add` 2017 to license
