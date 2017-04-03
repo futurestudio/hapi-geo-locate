@@ -1,6 +1,6 @@
 # Changelog
 
-## Version 1.1.2 (2017-03-24)
+## Version 1.1.3 (2017-xx-xx)
 - add logo 
 
 ## Version 1.1.2 (2017-03-24)
