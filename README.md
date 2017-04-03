@@ -1,6 +1,4 @@
-<p align="center">
-    <img height="256" src="https://github.com/fs-opensource/hapi-geo-locate/blob/master/media/hapi-geo-locate-presence.png?raw=true" alt="logo">
-</p>
+![hapi-geo-locate](media/hapi-geo-locate-presence.png)
 
 <p align="center">
     <a href="https://travis-ci.org/fs-opensource/hapi-geo-locate"><img src="https://camo.githubusercontent.com/9f56ef242c6f588f74f39f0bd61c1acd34d853af/68747470733a2f2f7472617669732d63692e6f72672f66732d6f70656e736f757263652f686170692d67656f2d6c6f636174652e7376673f6272616e63683d6d6173746572" alt="Build Status" data-canonical-src="https://travis-ci.org/fs-opensource/hapi-geo-locate.svg?branch=master" style="max-width:100%;"></a>
