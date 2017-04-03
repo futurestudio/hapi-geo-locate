@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://github.com/fs-opensource/hapi-geo-locate/blob/master/media/hapi-geo-locate-presence.png?raw=true" alt="logo" style="height: 256px !important;">
+    <img height="256" src="https://github.com/fs-opensource/hapi-geo-locate/blob/master/media/hapi-geo-locate-presence.png?raw=true" alt="logo">
 </p>
 
 <p align="center">
