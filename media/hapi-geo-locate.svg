@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   height="742"
+   width="1366"
+   version="1.1"
+   id="svg2"
+   viewBox="0 0 1366 742">
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs8">
+    <linearGradient
+       id="linearGradient4158">
+      <stop
+         id="stop4160"
+         offset="0"
+         style="stop-color:#9b59b6;stop-opacity:1" />
+      <stop
+         id="stop4162"
+         offset="1"
+         style="stop-color:#6e48aa;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       gradientTransform="matrix(0.98664901,0,0,0.98664901,3.4178524,3.4178428)"
+       gradientUnits="userSpaceOnUse"
+       y2="507.9321"
+       x2="507.13278"
+       y1="-0.55667275"
+       x1="2.7119405"
+       id="linearGradient4164"
+       xlink:href="#linearGradient4158" />
+    <filter
+       height="1.306"
+       y="-0.153"
+       width="1.4371428"
+       x="-0.21857142"
+       id="filter4196"
+       style="color-interpolation-filters:sRGB">
+      <feGaussianBlur
+         id="feGaussianBlur4198"
+         stdDeviation="16.32" />
+    </filter>
+  </defs>
+  <g
+     transform="translate(115,115)"
+     id="g4245">
+    <g
+       id="g4220"
+       transform="translate(-33.900961,0)">
+      <path
+         d="M 474.74256,382.29108 256,508.58215 37.257438,382.29108 37.257439,129.70892 256,3.4178467 474.74256,129.70892 Z"
+         id="path4148"
+         style="fill:url(#linearGradient4164);fill-opacity:1;stroke:#452b62;stroke-width:6;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         style="opacity:0.8;fill:#000000;fill-opacity:1;filter:url(#filter4196)"
+         id="path4"
+         d="m 256,384 c 0,0 -89.6,-116.864 -89.6,-166.4 a 89.6,89.6 0 1 1 179.2,0 C 345.6,267.136 256,384 256,384 Z m 0,-140.8 a 25.6,25.6 0 0 0 0,-51.2 25.6,25.6 0 1 0 0,51.2 z" />
+      <path
+         style="fill:#ffffff;fill-opacity:1"
+         d="m 256,384 c 0,0 -89.6,-116.864 -89.6,-166.4 a 89.6,89.6 0 1 1 179.2,0 C 345.6,267.136 256,384 256,384 Z m 0,-140.8 a 25.6,25.6 0 0 0 0,-51.2 25.6,25.6 0 1 0 0,51.2 z"
+         id="path4166" />
+    </g>
+    <g
+       id="g4218"
+       transform="translate(-33.900961,-0.3999057)">
+      <text
+         id="text4200"
+         y="251.8008"
+         x="587.0462"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#343536;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:90px;font-family:'Brix Sans';-inkscape-font-specification:'Brix Sans Bold';fill:#343536;fill-opacity:1"
+           y="251.8008"
+           x="587.0462"
+           id="tspan4202">hapi-geo-locate</tspan></text>
+      <text
+         id="text4204"
+         y="314.45901"
+         x="588.90619"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#aaaaaa;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-family:'Brix Sans';-inkscape-font-specification:'Brix Sans Light';fill:#aaaaaa;fill-opacity:1"
+           y="314.45901"
+           x="588.90619"
+           id="tspan4206">by futurestud.io</tspan></text>
+    </g>
+  </g>
+</svg>
