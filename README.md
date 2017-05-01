@@ -63,7 +63,7 @@ The following plugin options allow you to customize the default behavior of `hap
 server.register({
     register: require('hapi-geo-locate'),
     options: {
-        enabledByDefault: true
+        enabledByDefault: false
     }
 }, (err) => {
     // …
