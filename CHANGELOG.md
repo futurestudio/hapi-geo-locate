@@ -1,6 +1,6 @@
 # Changelog
 
-## Version 2.0.0 (2017-05-xx)
+## Version 2.0.0 (2017-05-01)
 - `update` route settings to listen on `hapi-geo-locate` instead of `hapiGeoLocate` (breaking change)
 - add logo
 
