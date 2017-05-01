@@ -92,7 +92,7 @@ The plugin configuration can be customized for single routes using the `hapi-geo
 server.register({
     register: require('hapi-geo-locate'),
     options: {
-        enabledByDefault: true
+        enabledByDefault: false
     }
 }, (err) => {
     // …
