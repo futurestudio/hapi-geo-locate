@@ -45,9 +45,10 @@ server.route({
     path: '/',
     handler: (request, reply) => {
         const location = request.location
+        
         // use client location
 
-        reply(request.location)
+        reply(location)
     }
 })
 ```
@@ -85,7 +86,7 @@ The following plugin options allow you to customize the behavior of `hapi-geo-lo
 
 - **enabled**: `(boolean)` — tells the plugin to enable (`true`) or disable (`false`) geo location for the request by IP
 
-The plugin configuration can be customized using the `hapiGeoLocation` (plugin name in camelCase) key:
+The plugin configuration can be customized for single routes using the `hapi-geo-locate` key:
 
 ```js
 server.register({
@@ -109,7 +110,7 @@ server.route({
     },
     config: {
         plugins: {
-            hapiGeoLocate: {
+            'hapi-geo-locate': {
                 enabled: true
             }
         }
@@ -119,17 +120,24 @@ server.route({
 
 
 ## Supported Proxies
-Running your application behind a (reverse) proxy like nginx, the client’s IP address gets reset to localhost. You can pass the actual request IP to your app using a header.
+Running your application behind a (reverse) proxy like nginx, the client’s IP address gets reset to localhost.
+You can pass the actual request IP to your app using a header.
 
 The current version supports the following proxies:
 
 - **nginx:** using the `x-forwarded-for` header field
 
-Proxied IP addresses are prefered over the address found in `request.info.remoteAddress`! There’s currently no option to change that behavior. If you need to self-select the prefered method to determine the client IP, please let me know so I can add this feature or even better: create a pull request :)
+**Actually, any proxy is supported if you configure it to use the `x-forwarded-for` header field.**
+
+Proxied IP addresses are preferred over the address found in `request.info.remoteAddress`! There’s currently
+no option to change that behavior. If you need to self-select the prefered method to determine the client IP,
+please let me know so I can add this feature or even better: create a pull request :)
 
 
 ## Feature Requests
-Do you miss a feature? Please don’t hesitate to [create an issue](https://github.com/fs-opensource/hapi-geo-locate/issues) with a short description of your desired addition to this plugin.
+Do you miss a feature? Please don’t hesitate to 
+[create an issue](https://github.com/fs-opensource/hapi-geo-locate/issues) with a short description of your
+desired addition to this plugin.
 
 
 ## Links & Resources
