@@ -61,7 +61,7 @@ experiment('hapi-geo-locate register plugin', () => {
             },
             config: {
                 plugins: {
-                    hapiGeoLocate: {
+                    'hapi-geo-locate': {
                         enabled: false
                     }
                 }

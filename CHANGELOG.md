@@ -1,5 +1,8 @@
 # Changelog
 
+## Version 1.2.0 (2017-05-xx)
+- `update` route settings to listen on `hapi-geo-locate` instead of `hapiGeoLocate`  
+
 ## Version 1.1.2 (2017-03-24)
 - add project badges for TravisCI, Snyk and NSP (both checking for dependency vulerabilities), NPM
 - `fix` wrong import code in README
