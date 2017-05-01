@@ -4,8 +4,6 @@
 - `update` route settings to listen on `hapi-geo-locate` instead of `hapiGeoLocate` (breaking change)
 - add logo
 
----
-
 ### Migration for Breaking Changes
 - check your routes where your reference `hapiGeoLocate` and replace it with `'hapi-geo-locate'`. With the new style,
  route options and plugin name match.
