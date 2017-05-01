@@ -4,6 +4,12 @@
 - `update` route settings to listen on `hapi-geo-locate` instead of `hapiGeoLocate` (breaking change)
 - add logo
 
+---
+
+### Migration for Breaking Changes
+- check your routes where your reference `hapiGeoLocate` and replace it with `'hapi-geo-locate'`. With the new style,
+ route options and plugin name match.
+
 ## Version 1.1.2 (2017-03-24)
 - add project badges for TravisCI, Snyk and NSP (both checking for dependency vulerabilities), NPM
 - `fix` wrong import code in README
