@@ -1,6 +1,9 @@
 # Changelog
 
-## Version 2.1.0 (2017-05-xx)
+## Version 2.2.0 (2017-xx-xx)
+- tba. 
+
+## Version 2.1.0 (2017-05-04)
 - `add` route option `fakeIP` to use a defined IP address for geo location 
 
 ## Version 2.0.0 (2017-05-01)
