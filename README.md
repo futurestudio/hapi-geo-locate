@@ -81,19 +81,17 @@ server.route({
 ```
 
 
-## Plugin Route Handler Options
-The following plugin options allow you to customize the behavior of `hapi-geo-locate` on individual route handlers:
+## Route Handler Options
+The following plugin options on individual route handlers allow you to customize the behavior of `hapi-geo-locate`:
 
 - **enabled**: `(boolean)` — tells the plugin to enable (`true`) or disable (`false`) geo location for the request by IP
+- **fakeIP**: `(string)` — tells the plugin to use the defined IP address to geo locate the request (by this IP)
 
 The plugin configuration can be customized for single routes using the `hapi-geo-locate` key:
 
 ```js
 server.register({
-    register: require('hapi-geo-locate'),
-    options: {
-        enabledByDefault: false
-    }
+    register: require('hapi-geo-locate') // enabled by default)
 }, (err) => {
     // …
 })
@@ -111,7 +109,8 @@ server.route({
     config: {
         plugins: {
             'hapi-geo-locate': {
-                enabled: true
+                enabled: true,
+                fakeIP: '4.4.4.4'
             }
         }
     }
