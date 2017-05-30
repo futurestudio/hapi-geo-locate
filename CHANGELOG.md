@@ -1,7 +1,9 @@
 # Changelog
 
 ## Version 2.2.0 (2017-xx-xx)
-- tba. 
+- use [request-ip]() package to determine the external IP address (`request-ip` supports a lot more ways to get the IP 👌)
+- update dependencies
+- update `README` and point out that all common ways of determining the external IP are now supported :)
 
 ## Version 2.1.0 (2017-05-04)
 - `add` route option `fakeIP` to use a defined IP address for geo location 
