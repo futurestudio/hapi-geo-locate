@@ -130,6 +130,8 @@ server.route({
 - `X-Cluster-Client-IP`
 - and all the `request.[connection|socket|info].remoteAddress` variations.
 
+If the IP address cannot be found, `null` is returned.
+
 Running your application behind a (reverse) proxy like nginx, the client’s IP address gets reset to localhost.
 You can grab the actual request IP to your app using an HTTP header.
 
