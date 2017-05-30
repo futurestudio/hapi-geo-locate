@@ -45,7 +45,7 @@ server.route({
     path: '/',
     handler: (request, reply) => {
         const location = request.location
-        
+
         // use client location
 
         reply(location)
@@ -119,6 +119,17 @@ server.route({
 
 
 ## Supported Proxies
+`hapi-geo-locate` supports all proxies that [request-ip](https://github.com/pbojinov/request-ip) does!
+
+- `X-Client-IP`
+- `X-Forwarded-For`, picking the first, client IP if the request went through multiple proxies.
+- `X-Forwarded`, `Forwarded-For` and `Forwarded` as variations of `X-Forwarded-For`
+- `CF-Connecting-IP`
+- `True-Client-Ip`
+- `X-Real-IP`
+- `X-Cluster-Client-IP`
+- and all the `request.[connection|socket|info].remoteAddress` variations.
+
 Running your application behind a (reverse) proxy like nginx, the client’s IP address gets reset to localhost.
 You can grab the actual request IP to your app using an HTTP header.
 
@@ -129,7 +140,7 @@ You should be safe in any way :)
 
 
 ## Feature Requests
-Do you miss a feature? Please don’t hesitate to 
+Do you miss a feature? Please don’t hesitate to
 [create an issue](https://github.com/fs-opensource/hapi-geo-locate/issues) with a short description of your
 desired addition to this plugin.
 
