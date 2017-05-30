@@ -119,7 +119,7 @@ server.route({
 
 
 ## Supported Proxies
-`hapi-geo-locate` supports all proxies that [request-ip](https://github.com/pbojinov/request-ip) does!
+`hapi-geo-locate` supports all proxies that [request-ip](https://github.com/pbojinov/request-ip) does:
 
 - `X-Client-IP`
 - `X-Forwarded-For`, picking the first, client IP if the request went through multiple proxies.
