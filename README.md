@@ -120,17 +120,12 @@ server.route({
 
 ## Supported Proxies
 Running your application behind a (reverse) proxy like nginx, the client’s IP address gets reset to localhost.
-You can pass the actual request IP to your app using a header.
+You can grab the actual request IP to your app using an HTTP header.
 
-The current version supports the following proxies:
+`hapi-geo-locate` uses the [request-ip](https://github.com/pbojinov/request-ip) package to determine the external IP address. This package supports
+all common HTTP headers and ways to get the request’s IP. Awesome!
 
-- **nginx:** using the `x-forwarded-for` header field
-
-**Actually, any proxy is supported if you configure it to use the `x-forwarded-for` header field.**
-
-Proxied IP addresses are preferred over the address found in `request.info.remoteAddress`! There’s currently
-no option to change that behavior. If you need to self-select the prefered method to determine the client IP,
-please let me know so I can add this feature or even better: create a pull request :)
+You should be safe in any way :)
 
 
 ## Feature Requests
@@ -143,6 +138,7 @@ desired addition to this plugin.
 
 - [hapi tutorial series](https://futurestud.io/tutorials/hapi-get-your-server-up-and-running)
 - [node-ipinfo](https://github.com/IonicaBizau/node-ipinfo): Node.js wrapper for the [ipinfo.io](http://ipinfo.io) API
+- [request-ip](https://github.com/pbojinov/request-ip): Node.js module for retrieving a request’s IP address
 
 
 ## Contributing
