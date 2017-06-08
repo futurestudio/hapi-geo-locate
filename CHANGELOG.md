@@ -1,6 +1,9 @@
 # Changelog
 
-## Version 2.2.0 (2017-xx-xx)
+## Version 2.x.x (2017-xx-xx)
+- *tba*.
+
+## Version 2.2.0 (2017-05-30)
 - use [request-ip]() package to determine the external IP address (`request-ip` supports a lot more ways to get the IP 👌)
 - update dependencies
 - update `README` and point out that all ways of determining the external IP address that are supported :)
