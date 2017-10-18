@@ -1,11 +1,11 @@
-'use strict'
+'use strict';
 
 const Lab = require('lab');
 const Code = require('code');
 const Hapi = require('hapi');
 
 const server = new Hapi.Server();
-server.connection({port: 3000});
+server.connection({ port: 3000 });
 
 const lab = exports.lab = Lab.script();
 const experiment = lab.experiment;
@@ -32,6 +32,7 @@ experiment('hapi-geo-locate detect client location with proxied request (x-forwa
             path: '/no-proxy',
             method: 'GET',
             handler: (request, reply) => {
+
                 reply(request.location);
             }
         };
@@ -64,6 +65,7 @@ experiment('hapi-geo-locate detect client location with proxied request (x-forwa
             path: '/single-proxy',
             method: 'GET',
             handler: (request, reply) => {
+
                 reply(request.location);
             }
         };
@@ -97,6 +99,7 @@ experiment('hapi-geo-locate detect client location with proxied request (x-forwa
             path: '/multiple-proxies',
             method: 'GET',
             handler: (request, reply) => {
+
                 reply(request.location);
             }
         };
@@ -107,7 +110,7 @@ experiment('hapi-geo-locate detect client location with proxied request (x-forwa
             url: routeOptions.path,
             method: routeOptions.method,
             headers: {
-                'x-forwarded-for': '4.4.4.4, 8.8.8.8, 1.1.1.1'
+                'x-forwarded-for': '8.8.8.8, 4.4.4.4, 1.1.1.1'
             }
         };
 
@@ -118,10 +121,10 @@ experiment('hapi-geo-locate detect client location with proxied request (x-forwa
             Code.expect(response.statusCode).to.equal(200);
             Code.expect(Object.keys(payload)).to.contain(['ip']);
             Code.expect(Object.keys(payload)).to.contain(['hostname']);
-            Code.expect(payload.ip).to.equal('4.4.4.4');
+            Code.expect(payload.ip).to.equal('8.8.8.8');
 
             done();
         });
     });
 
-})
+});

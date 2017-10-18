@@ -1,12 +1,16 @@
 # Changelog
 
-## Version 2.x.x (2017-xx-xx)
-- *tba*.
+## Version 2.2.1 (2017-10-18)
+- `add` ESLint file `.eslintrc.json` for hapi-style code formatting
+- `add` option to lint code while testing (lab does that with the `--lint` flag)
+- `add` required Node.js to `engines` field in `package.json` (To make sure that NPM follows the Node.js v4+ requirement)
+- `update` code formatting to hapi-style
+- `update` dependencies
 
 ## Version 2.2.0 (2017-05-30)
-- use [request-ip]() package to determine the external IP address (`request-ip` supports a lot more ways to get the IP 👌)
-- update dependencies
-- update `README` and point out that all ways of determining the external IP address that are supported :)
+- use [request-ip](https://github.com/pbojinov/request-ip) package to determine the external IP address (`request-ip` supports a lot more ways to get the IP 👌)
+- `update` dependencies
+- `update` README and point out that all ways of determining the external IP address that are supported :)
 
 ## Version 2.1.0 (2017-05-04)
 - `add` route option `fakeIP` to use a defined IP address for geo location 

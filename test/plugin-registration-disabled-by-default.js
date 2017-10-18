@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const Lab = require('lab');
 const Code = require('code');
@@ -32,6 +32,7 @@ experiment('hapi-geo-locate register plugin', () => {
             path: '/no-options',
             method: 'GET',
             handler: (request, reply) => {
+
                 reply(request.location);
             }
         };
@@ -60,6 +61,7 @@ experiment('hapi-geo-locate register plugin', () => {
             path: '/with-options',
             method: 'GET',
             handler: (request, reply) => {
+
                 reply(request.location);
             },
             config: {
@@ -83,7 +85,7 @@ experiment('hapi-geo-locate register plugin', () => {
             const payload = JSON.parse(response.payload || '{}');
 
             Code.expect(response.statusCode).to.equal(200);
-            Code.expect(Object.keys(payload)).to.contain([ 'ip' ]);
+            Code.expect(Object.keys(payload)).to.contain(['ip']);
 
             done();
         });

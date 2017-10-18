@@ -1,11 +1,11 @@
-'use strict'
+'use strict';
 
 const Lab = require('lab');
 const Code = require('code');
 const Hapi = require('hapi');
 
 const server = new Hapi.Server();
-server.connection({port: 3000});
+server.connection({ port: 3000 });
 
 const lab = exports.lab = Lab.script();
 const experiment = lab.experiment;
@@ -30,11 +30,12 @@ experiment('hapi-geo-locate detect client location with fake IP address', () => 
             method: 'GET',
             config: {
                 handler: (request, reply) => {
+
                     reply(request.location);
                 },
                 plugins: {
                     'hapi-geo-locate': {
-                        fakeIP: '4.4.4.4'
+                        fakeIP: '8.8.8.8'
                     }
                 }
             }
@@ -54,7 +55,7 @@ experiment('hapi-geo-locate detect client location with fake IP address', () => 
             Code.expect(response.statusCode).to.equal(200);
             Code.expect(Object.keys(payload)).to.contain(['ip']);
             Code.expect(Object.keys(payload)).to.contain(['hostname']);
-            Code.expect(payload.ip).to.equal('4.4.4.4');
+            Code.expect(payload.ip).to.equal('8.8.8.8');
 
             done();
         });
@@ -67,6 +68,7 @@ experiment('hapi-geo-locate detect client location with fake IP address', () => 
             method: 'GET',
             config: {
                 handler: (request, reply) => {
+
                     reply(request.location);
                 },
                 plugins: {
@@ -103,6 +105,7 @@ experiment('hapi-geo-locate detect client location with fake IP address', () => 
             path: '/without-fake-ip',
             method: 'GET',
             handler: (request, reply) => {
+
                 reply(request.location);
             }
         };
@@ -127,4 +130,4 @@ experiment('hapi-geo-locate detect client location with fake IP address', () => 
         });
     });
 
-})
+});
