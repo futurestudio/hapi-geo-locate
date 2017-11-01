@@ -11,15 +11,17 @@
     "request-ip": "~2.0.2"
   },
   "devDependencies": {
-    "code": "~4.0.0",
-    "eslint": "~4.9.0",
-    "eslint-config-hapi": "~10.1.0",
-    "eslint-plugin-hapi": "~4.0.0",
-    "hapi": "~16.6.2",
-    "lab": "~13.1.0"
+    "code": "~5.1.0",
+    "eslint-config-standard": "~10.2.1",
+    "eslint-plugin-import": "~2.8.0",
+    "eslint-plugin-node": "~5.2.1",
+    "eslint-plugin-promise": "~3.6.0",
+    "eslint-plugin-standard": "~3.0.1",
+    "hapi": "~17.0.0-RC9",
+    "lab": "~15.1.1"
   },
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=8.0.0"
   },
   "homepage": "https://github.com/fs-opensource/hapi-geo-locate#readme",
   "keywords": [

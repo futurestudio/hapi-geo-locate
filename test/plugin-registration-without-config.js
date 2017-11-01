@@ -1,90 +1,72 @@
-'use strict';
+'use strict'
 
-const Lab = require('lab');
-const Code = require('code');
-const Hapi = require('hapi');
+const Lab = require('lab')
+const Code = require('code')
+const Hapi = require('hapi')
 
-const server = new Hapi.Server();
-server.connection({ port: 3000 });
+const server = new Hapi.Server()
 
-const lab = exports.lab = Lab.script();
-const experiment = lab.experiment;
-const test = lab.test;
+const lab = (exports.lab = Lab.script())
+const experiment = lab.experiment
+const test = lab.test
 
 experiment('hapi-geo-locate register plugin', () => {
+  lab.before(async () => {
+    server.register({
+      plugin: require('../lib/index')
+    })
+  })
 
-    lab.before((done) => {
+  test('test if the plugin works without any options', async () => {
+    const routeOptions = {
+      path: '/no-options',
+      method: 'GET',
+      handler: (request, h) => {
+        return request.location
+      }
+    }
 
-        server.register({
-            register: require('../lib/index')
-        }, (err) => {
+    server.route(routeOptions)
 
-            done(err);
-        });
-    });
+    const options = {
+      url: routeOptions.path,
+      method: routeOptions.method
+    }
 
-    test('test if the plugin works without any options', (done) => {
+    const response = await server.inject(options)
+    const payload = JSON.parse(response.payload || '{}')
 
-        const routeOptions = {
-            path: '/no-options',
-            method: 'GET',
-            handler: (request, reply) => {
+    Code.expect(response.statusCode).to.equal(200)
+    Code.expect(Object.keys(payload)).to.contain(['ip'])
+  })
 
-                reply(request.location);
-            }
-        };
+  test('test if the plugin disables when passing plugin config on route', async () => {
+    const routeOptions = {
+      path: '/with-options',
+      method: 'GET',
+      handler: (request, h) => {
+        return h.response(request.location)
+      },
+      config: {
+        plugins: {
+          'hapi-geo-locate': {
+            enabled: false
+          }
+        }
+      }
+    }
 
-        server.route(routeOptions);
+    server.route(routeOptions)
 
-        const options = {
-            url: routeOptions.path,
-            method: routeOptions.method
-        };
+    const options = {
+      url: routeOptions.path,
+      method: routeOptions.method
+    }
 
-        server.inject(options, (response) => {
+    const response = await server.inject(options)
+    const payload = JSON.parse(response.payload || '{}')
 
-            const payload = JSON.parse(response.payload || '{}');
-
-            Code.expect(response.statusCode).to.equal(200);
-            Code.expect(Object.keys(payload)).to.contain(['ip']);
-
-            done();
-        });
-    });
-
-    test('test if the plugin disables when passing plugin config on route', (done) => {
-
-        const routeOptions = {
-            path: '/with-options',
-            method: 'GET',
-            handler: (request, reply) => {
-
-                reply(request.location);
-            },
-            config: {
-                plugins: {
-                    'hapi-geo-locate': {
-                        enabled: false
-                    }
-                }
-            }
-        };
-
-        server.route(routeOptions);
-
-        const options = {
-            url: routeOptions.path,
-            method: routeOptions.method
-        };
-
-        server.inject(options, (response) => {
-
-            const payload = JSON.parse(response.payload || '{}');
-
-            Code.expect(response.statusCode).to.equal(200);
-            Code.expect(payload).to.be.empty();
-
-            done();
-        });
-    });
-});
+    Code.expect(response.statusCode).to.equal(200)
+    Code.expect(payload).to.be.empty()
+  })
+})
