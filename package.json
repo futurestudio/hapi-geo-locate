@@ -18,6 +18,7 @@
     "eslint-plugin-promise": "~3.6.0",
     "eslint-plugin-standard": "~3.0.1",
     "hapi": "~17.0.0-RC9",
+    "husky": "~0.14.3",
     "lab": "~15.1.1"
   },
   "engines": {
