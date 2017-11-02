@@ -31,24 +31,24 @@ npm i -S hapi-geo-locate
 The most straight forward way to register the `hapi-geo-locate` plugin:
 
 ```js
-server.register(require('hapi-geo-locate'), (err) => {
-    if (err) {
-        // handle plugin registration error
-    }
-
+server.register({
+    plugin: require('hapi-geo-locate')
+}).then(() => {
     // went smooth like chocolate :)
+}).catch(err => {
+    // handle plugin registration error
 })
 
 // Within your route handler functions, you can access the location like this
 server.route({
     method: 'GET',
     path: '/',
-    handler: (request, reply) => {
+    handler: (request, h) => {
         const location = request.location
 
         // use client location
 
-        reply(location)
+        return location
     }
 })
 ```
@@ -61,11 +61,11 @@ The following plugin options allow you to customize the default behavior of `hap
 
 ```js
 server.register({
-    register: require('hapi-geo-locate'),
+    plugin: require('hapi-geo-locate'),
     options: {
-        enabledByDefault: true
+        enabledByDefault: false
     }
-}, (err) => {
+}).catch(err => {
     // …
 })
 
@@ -73,9 +73,10 @@ server.register({
 server.route({
     method: 'GET',
     path: '/',
-    handler: (request, reply) => {
+    handler: (request, h) => {
         const location = request.location // will be undefined
-        reply(location)
+
+        return h.response(location)
     }
 })
 ```
@@ -91,8 +92,8 @@ The plugin configuration can be customized for single routes using the `hapi-geo
 
 ```js
 server.register({
-    register: require('hapi-geo-locate') // enabled by default)
-}, (err) => {
+    plugin: require('hapi-geo-locate') // enabled by default
+}).catch(err => {
     // …
 })
 
@@ -100,17 +101,17 @@ server.register({
 server.route({
     method: 'GET',
     path: '/',
-    handler: (request, reply) => {
+    handler: (request, h) => {
         const location = request.location
         // use the location
 
-        reply(location)
+        return location
     },
     config: {
         plugins: {
             'hapi-geo-locate': {
                 enabled: true,
-                fakeIP: '4.4.4.4'
+                fakeIP: '8.8.8.8'
             }
         }
     }
@@ -118,7 +119,7 @@ server.route({
 ```
 
 
-## Supported Proxies
+## Supported Proxies and Proxy Headers
 `hapi-geo-locate` supports all proxies that [request-ip](https://github.com/pbojinov/request-ip) does:
 
 - `X-Client-IP`
@@ -149,7 +150,7 @@ desired addition to this plugin.
 
 ## Links & Resources
 
-- [hapi tutorial series](https://futurestud.io/tutorials/hapi-get-your-server-up-and-running)
+- [hapi tutorial series (70+ tutorials)](https://futurestud.io/tutorials/hapi-get-your-server-up-and-running)
 - [node-ipinfo](https://github.com/IonicaBizau/node-ipinfo): Node.js wrapper for the [ipinfo.io](http://ipinfo.io) API
 - [request-ip](https://github.com/pbojinov/request-ip): Node.js module for retrieving a request’s IP address
 
