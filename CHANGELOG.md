@@ -1,5 +1,14 @@
 # Changelog
 
+## Version 3.0.0 (2017-xx-xx)
+- `update` readme to show hapi v17 functionality
+- `update` dependencies to newest versions
+- `update` Node.js versions on travis to 8 and 9
+
+## Version 3.0.0-rc.1 (2017-11-01)
+- `update` hapi-geo-locate to support hapi v17
+- `update` library and tests to support new async/await structure
+
 ## Version 2.2.1 (2017-10-18)
 - `add` ESLint file `.eslintrc.json` for hapi-style code formatting
 - `add` option to lint code while testing (lab does that with the `--lint` flag)
@@ -13,7 +22,7 @@
 - `update` README and point out that all ways of determining the external IP address that are supported :)
 
 ## Version 2.1.0 (2017-05-04)
-- `add` route option `fakeIP` to use a defined IP address for geo location 
+- `add` route option `fakeIP` to use a defined IP address for geo location
 
 ## Version 2.0.0 (2017-05-01)
 - `update` route settings to listen on `hapi-geo-locate` instead of `hapiGeoLocate` (breaking change)
