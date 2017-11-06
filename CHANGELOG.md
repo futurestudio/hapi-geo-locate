@@ -1,6 +1,6 @@
 # Changelog
 
-## Version 3.0.0 (2017-xx-xx)
+## Version 3.0.0 (2017-11-06)
 - `update` readme to show hapi v17 functionality
 - `update` dependencies to newest versions
 - `update` Node.js versions on travis to 8 and 9
