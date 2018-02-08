@@ -10,6 +10,16 @@
 </p>
 
 
+------
+
+<p align="center"><sup>Development of this hapi plugin is supported by <a href="https://futurestud.io">Future Studio University 🚀</a></sup>
+<br><b>
+Join the <a href="https://futurestud.io/university">Future Studio University and Skyrocket in Node.js</a></b>
+</p>
+
+------
+
+
 ## Introduction
 A hapi plugin to geo locate requests by IP and provide `request.location` in your route handlers. The plugin uses [ipinfo.io](http://ipinfo.io/) for the IP geo location.
 
