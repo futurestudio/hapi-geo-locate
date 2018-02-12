@@ -11,15 +11,15 @@
     "request-ip": "~2.0.2"
   },
   "devDependencies": {
-    "code": "~5.1.2",
+    "code": "~5.2.0",
     "eslint-config-standard": "~10.2.1",
     "eslint-plugin-import": "~2.8.0",
     "eslint-plugin-node": "~5.2.1",
     "eslint-plugin-promise": "~3.6.0",
     "eslint-plugin-standard": "~3.0.1",
-    "hapi": "~17.0.1",
+    "hapi": "~17.2.0",
     "husky": "~0.14.3",
-    "lab": "~15.1.2"
+    "lab": "~15.2.2"
   },
   "engines": {
     "node": ">=8.0.0"
