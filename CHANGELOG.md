@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 3.0.1 (2018-02-12)
+- `update` code to be use async/await instead of promise
+- `update` code examples in readme to async/await
+- `bump` dependencies
+
 ## Version 3.0.0 (2017-11-06)
 - `update` readme to show hapi v17 functionality
 - `update` dependencies to newest versions
