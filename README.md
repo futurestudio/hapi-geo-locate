@@ -19,15 +19,14 @@ Join the <a href="https://futurestud.io/university">Future Studio University and
 ---
 
 ## Introduction
-
 A hapi plugin to geo locate requests by IP and provide `request.location` in your route handlers. The plugin uses [ipinfo.io](http://ipinfo.io/) for the IP geo location.
 
-## Requirements
 
+## Requirements
 The plugin supports hapi `17.x` and later, uses async/await and requires **Node.js v8 or later**.
 
-## Installation
 
+## Installation
 Add `hapi-geo-locate` as a dependency to your project:
 
 ```bash
@@ -35,8 +34,8 @@ npm i -S hapi-geo-locate
 # you’re using NPM shortcuts to (i)nstall and (-S)ave the module as a dependency
 ```
 
-### Do you use hapi v16 (or lower)?
 
+### Do you use hapi v16 (or lower)?
 Use the `2.2.1` release of `hapi-geo-locate` with hapi v16. Later versions are only compatible with hapi v17.
 
 ```bash
@@ -44,8 +43,8 @@ npm i -S hapi-geo-locate@2.2.1
 # you’re using NPM shortcuts to (i)nstall and (-S)ave the module as a dependency
 ```
 
-## Usage
 
+## Usage
 The most straight forward way to register the `hapi-geo-locate` plugin:
 
 ```js
@@ -69,11 +68,11 @@ server.route({
 })
 ```
 
-## Plugin Registration Options
 
+## Plugin Registration Options
 The following plugin options allow you to customize the default behavior of `hapi-geo-locate`:
 
-* **enabledByDefault**: `(boolean)`, default: `true` — by default, the plugin geo locates the request by IP on every request
+- **enabledByDefault**: `(boolean)`, default: `true` — by default, the plugin geo locates the request by IP on every request
 
 ```js
 await server.register({
@@ -95,12 +94,12 @@ server.route({
 })
 ```
 
-## Route Handler Options
 
+## Route Handler Options
 The following plugin options on individual route handlers allow you to customize the behavior of `hapi-geo-locate`:
 
-* **enabled**: `(boolean)` — tells the plugin to enable (`true`) or disable (`false`) geo location for the request by IP
-* **fakeIP**: `(string)` — tells the plugin to use the defined IP address to geo locate the request (by this IP)
+- **enabled**: `(boolean)` — tells the plugin to enable (`true`) or disable (`false`) geo location for the request by IP
+- **fakeIP**: `(string)` — tells the plugin to use the defined IP address to geo locate the request (by this IP)
 
 The plugin configuration can be customized for single routes using the `hapi-geo-locate` key:
 
@@ -130,18 +129,18 @@ server.route({
 })
 ```
 
-## Supported Proxies and Proxy Headers
 
+## Supported Proxies and Proxy Headers
 `hapi-geo-locate` supports all proxies that [request-ip](https://github.com/pbojinov/request-ip) does:
 
-* `X-Client-IP`
-* `X-Forwarded-For`, picking the first, client IP if the request went through multiple proxies.
-* `X-Forwarded`, `Forwarded-For` and `Forwarded` as variations of `X-Forwarded-For`
-* `CF-Connecting-IP`
-* `True-Client-Ip`
-* `X-Real-IP`
-* `X-Cluster-Client-IP`
-* and all the `request.[connection|socket|info].remoteAddress` variations.
+- `X-Client-IP`
+- `X-Forwarded-For`, picking the first, client IP if the request went through multiple proxies.
+- `X-Forwarded`, `Forwarded-For` and `Forwarded` as variations of `X-Forwarded-For`
+- `CF-Connecting-IP`
+- `True-Client-Ip`
+- `X-Real-IP`
+- `X-Cluster-Client-IP`
+- and all the `request.[connection|socket|info].remoteAddress` variations.
 
 If the IP address cannot be found, `null` is returned.
 
@@ -153,28 +152,28 @@ all common HTTP headers and ways to get the request’s IP. Awesome!
 
 You should be safe in any way :)
 
-## Feature Requests
 
+## Feature Requests
 Do you miss a feature? Please don’t hesitate to
 [create an issue](https://github.com/fs-opensource/hapi-geo-locate/issues) with a short description of your
 desired addition to this plugin.
 
-## Links & Resources
 
-* [hapi tutorial series (80+ tutorials)](https://futurestud.io/tutorials/hapi-get-your-server-up-and-running)
-* [node-ipinfo](https://github.com/IonicaBizau/node-ipinfo): Node.js wrapper for the [ipinfo.io](http://ipinfo.io) API
-* [request-ip](https://github.com/pbojinov/request-ip): Node.js module for retrieving a request’s IP address
+## Links & Resources
+- [hapi tutorial series (80+ tutorials)](https://futurestud.io/tutorials/hapi-get-your-server-up-and-running)
+- [node-ipinfo](https://github.com/IonicaBizau/node-ipinfo): Node.js wrapper for the [ipinfo.io](http://ipinfo.io) API
+- [request-ip](https://github.com/pbojinov/request-ip): Node.js module for retrieving a request’s IP address
+
 
 ## Contributing
-
 1. Create a fork
 2. Create your feature branch: `git checkout -b my-feature`
 3. Commit your changes: `git commit -am 'Add some feature'`
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request 🚀
 
-## License
 
+## License
 MIT © [Future Studio](https://futurestud.io)
 
 ---
