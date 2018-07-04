@@ -26,9 +26,14 @@
   },
   "homepage": "https://github.com/fs-opensource/hapi-geo-locate#readme",
   "keywords": [
-    "geo-location",
     "hapi",
-    "plugin"
+    "hapijs",
+    "plugin",
+    "geo",
+    "location",
+    "geo-location",
+    "ipLocation",
+    "IP location"
   ],
   "license": "MIT",
   "main": "lib/index.js",
