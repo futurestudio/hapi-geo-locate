@@ -160,7 +160,7 @@ desired addition to this plugin.
 
 
 ## Links & Resources
-- [hapi tutorial series (80+ tutorials)](https://futurestud.io/tutorials/hapi-get-your-server-up-and-running)
+- [hapi tutorial series (100+ tutorials)](https://futurestud.io/tutorials/hapi-get-your-server-up-and-running)
 - [node-ipinfo](https://github.com/IonicaBizau/node-ipinfo): Node.js wrapper for the [ipinfo.io](http://ipinfo.io) API
 - [request-ip](https://github.com/pbojinov/request-ip): Node.js module for retrieving a request’s IP address
 
