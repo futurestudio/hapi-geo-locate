@@ -1,5 +1,11 @@
 # Changelog
 
+## Version [3.0.2](https://github.com/fs-opensource/hapi-geo-locate/compare/v3.0.1...v3.0.2) - 2018-08-21
+- `add` keywords in package.json
+- `update` readme: reformat, quick navigation and logo size fix for small screens
+- `update` logo: minify file
+
+
 ## Version 3.0.1 (2018-02-12)
 - `update` code to be use async/await instead of promise
 - `update` code examples in readme to async/await
