@@ -1,5 +1,10 @@
 # Changelog
 
+## Version [3.1.0](https://github.com/fs-opensource/hapi-geo-locate/compare/v3.0.2...v3.1.0) - 2018-12-xx
+- `update` refactor to IP locator class
+- `update` dependencies: `request-ip` now supports more ways to find the client’s IP address
+
+
 ## Version [3.0.2](https://github.com/fs-opensource/hapi-geo-locate/compare/v3.0.1...v3.0.2) - 2018-08-21
 - `add` keywords in package.json
 - `update` readme: reformat, quick navigation and logo size fix for small screens
