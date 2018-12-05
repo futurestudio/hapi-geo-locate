@@ -7,11 +7,10 @@ const Hapi = require('hapi')
 const server = new Hapi.Server()
 
 const lab = (exports.lab = Lab.script())
-const experiment = lab.experiment
-const test = lab.test
+const { experiment, it, before } = lab
 
 experiment('hapi-geo-locate detect client location with proxied request (x-forwarded-for header)', () => {
-  lab.before(async () => {
+  before(async () => {
     await server.register({
       plugin: require('../lib/index'),
       options: {
@@ -20,26 +19,22 @@ experiment('hapi-geo-locate detect client location with proxied request (x-forwa
     })
   })
 
-  test('test if the plugin works with a proxied request through a single proxy', async () => {
+  it('proxies a request through a single, empty proxy header', async () => {
     const routeOptions = {
       path: '/no-proxy',
       method: 'GET',
-      handler: (request, h) => {
-        return request.location
-      }
+      handler: request => request.location
     }
 
     server.route(routeOptions)
 
-    const options = {
+    const request = {
       url: routeOptions.path,
       method: routeOptions.method,
-      headers: {
-        'x-forwarded-for': ''
-      }
+      headers: { 'x-forwarded-for': '' }
     }
 
-    const response = await server.inject(options)
+    const response = await server.inject(request)
     const payload = JSON.parse(response.payload || '{}')
 
     Code.expect(response.statusCode).to.equal(200)
@@ -47,26 +42,23 @@ experiment('hapi-geo-locate detect client location with proxied request (x-forwa
     Code.expect(payload.ip).to.equal('127.0.0.1')
   })
 
-  test('test if the plugin works with a proxied request through a single proxy', async () => {
+  it('proxies a request through a single proxy header', async () => {
     const routeOptions = {
       path: '/single-proxy',
       method: 'GET',
-      handler: (request, h) => {
-        return request.location
-      }
+      handler: request => request.location
+
     }
 
     server.route(routeOptions)
 
-    const options = {
+    const request = {
       url: routeOptions.path,
       method: routeOptions.method,
-      headers: {
-        'x-forwarded-for': '8.8.8.8'
-      }
+      headers: { 'x-forwarded-for': '8.8.8.8' }
     }
 
-    const response = await server.inject(options)
+    const response = await server.inject(request)
     const payload = JSON.parse(response.payload || '{}')
 
     Code.expect(response.statusCode).to.equal(200)
@@ -75,26 +67,23 @@ experiment('hapi-geo-locate detect client location with proxied request (x-forwa
     Code.expect(payload.ip).to.equal('8.8.8.8')
   })
 
-  test('test if the plugin works with a proxied request through multiple proxies', async () => {
+  it('proxies a request through multiple proxies', async () => {
     const routeOptions = {
       path: '/multiple-proxies',
       method: 'GET',
-      handler: (request, h) => {
-        return request.location
-      }
+      handler: request => request.location
+
     }
 
     server.route(routeOptions)
 
-    const options = {
+    const request = {
       url: routeOptions.path,
       method: routeOptions.method,
-      headers: {
-        'x-forwarded-for': '8.8.8.8, 4.4.4.4, 1.1.1.1'
-      }
+      headers: { 'x-forwarded-for': '8.8.8.8, 4.4.4.4, 1.1.1.1' }
     }
 
-    const response = await server.inject(options)
+    const response = await server.inject(request)
     const payload = JSON.parse(response.payload || '{}')
 
     Code.expect(response.statusCode).to.equal(200)

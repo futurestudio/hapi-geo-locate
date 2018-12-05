@@ -42,6 +42,8 @@
     "url": "git+https://github.com/fs-opensource/hapi-geo-locate.git"
   },
   "scripts": {
-    "test": "lab --assert code --leaks --coverage --lint"
+    "test": "lab --assert code --leaks --coverage --lint",
+    "list-tests": "lab -dv",
+    "test-single": "lab --assert code --leaks --coverage --lint --id"
   }
 }
