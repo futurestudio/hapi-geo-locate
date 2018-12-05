@@ -7,11 +7,10 @@ const Hapi = require('hapi')
 const server = new Hapi.Server()
 
 const lab = (exports.lab = Lab.script())
-const experiment = lab.experiment
-const test = lab.test
+const { experiment, it, before } = lab
 
-experiment('hapi-geo-locate register plugin', () => {
-  lab.before(async () => {
+experiment('hapi-geo-locate register plugin disabled by default', () => {
+  before(async () => {
     await server.register({
       plugin: require('../lib/index'),
       options: {
@@ -20,53 +19,46 @@ experiment('hapi-geo-locate register plugin', () => {
     })
   })
 
-  test('test if the plugin disables with options during registration', async () => {
+  it('does not locate a request when plugin is disabled by default', async () => {
     const routeOptions = {
       path: '/no-options',
       method: 'GET',
-      handler: (request, h) => {
-        return h.response(request.location)
-      }
+      handler: request => request.location || ''
+
     }
 
     server.route(routeOptions)
 
-    const options = {
+    const request = {
       url: routeOptions.path,
       method: routeOptions.method
     }
 
-    const response = await server.inject(options)
+    const response = await server.inject(request)
     const payload = JSON.parse(response.payload || '{}')
 
     Code.expect(response.statusCode).to.equal(200)
     Code.expect(Object.keys(payload)).to.be.empty()
   })
 
-  test('test if the plugin enables when passing plugin config on route', async () => {
+  it('locates the request when enabled on a route', async () => {
     const routeOptions = {
       path: '/with-options',
       method: 'GET',
-      handler: (request, h) => {
-        return request.location
-      },
+      handler: request => request.location,
       config: {
-        plugins: {
-          'hapi-geo-locate': {
-            enabled: true
-          }
-        }
+        plugins: { 'hapi-geo-locate': { enabled: true } }
       }
     }
 
     server.route(routeOptions)
 
-    const options = {
+    const request = {
       url: routeOptions.path,
       method: routeOptions.method
     }
 
-    const response = await server.inject(options)
+    const response = await server.inject(request)
     const payload = JSON.parse(response.payload || '{}')
 
     Code.expect(response.statusCode).to.equal(200)
