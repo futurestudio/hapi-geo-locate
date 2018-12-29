@@ -5,7 +5,7 @@
   <br/>
 
   <p>
-    hapi plugin that shortcuts “request.auth.credentials” to “request.user”
+    A hapi plugin to geo-locate requests
   </p>
   <br/>
   <p>
