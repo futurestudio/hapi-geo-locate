@@ -4,7 +4,7 @@
   "version": "3.1.1",
   "author": "Future Studio <info@futurestud.io>",
   "bugs": {
-    "url": "https://github.com/fs-opensource/hapi-geo-locate/issues"
+    "url": "https://github.com/futurestudio/hapi-geo-locate/issues"
   },
   "dependencies": {
     "ipinfo": "~1.3.9",
@@ -25,7 +25,7 @@
   "engines": {
     "node": ">=8"
   },
-  "homepage": "https://github.com/fs-opensource/hapi-geo-locate#readme",
+  "homepage": "https://github.com/futurestudio/hapi-geo-locate#readme",
   "keywords": [
     "hapi",
     "hapijs",
@@ -40,7 +40,7 @@
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fs-opensource/hapi-geo-locate.git"
+    "url": "git+https://github.com/futurestudio/hapi-geo-locate.git"
   },
   "scripts": {
     "test": "lab --assert code --leaks --coverage --lint",

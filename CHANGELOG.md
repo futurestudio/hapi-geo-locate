@@ -1,6 +1,6 @@
 # Changelog
 
-## Version [3.1.1](https://github.com/fs-opensource/hapi-geo-locate/compare/v3.1.0...v3.1.1) - 2019-01-22
+## Version [3.1.1](https://github.com/futurestudio/hapi-geo-locate/compare/v3.1.0...v3.1.1) - 2019-01-22
 
 ### Added
 - test plugin for hapi 18
@@ -12,7 +12,7 @@
 - bump dependencies
 
 
-## Version [3.1.0](https://github.com/fs-opensource/hapi-geo-locate/compare/v3.0.2...v3.1.0) - 2018-12-06
+## Version [3.1.0](https://github.com/futurestudio/hapi-geo-locate/compare/v3.0.2...v3.1.0) - 2018-12-06
 - `add` Node.js v11 as version in Travis CI
 - `update` refactor code to IP locator class
 - `update` dependencies: `request-ip` now supports more ways to find the client’s IP address
@@ -20,7 +20,7 @@
 - `remove` NPM’s `package-lock.json` from repository
 
 
-## Version [3.0.2](https://github.com/fs-opensource/hapi-geo-locate/compare/v3.0.1...v3.0.2) - 2018-08-21
+## Version [3.0.2](https://github.com/futurestudio/hapi-geo-locate/compare/v3.0.1...v3.0.2) - 2018-08-21
 - `add` keywords in package.json
 - `update` readme: reformat, quick navigation and logo size fix for small screens
 - `update` logo: minify file
