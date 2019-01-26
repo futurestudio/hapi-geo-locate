@@ -1,5 +1,11 @@
 # Changelog
 
+## Version [3.1.2](https://github.com/futurestudio/hapi-geo-locate/compare/v3.1.1...v3.1.2) - 2019-01-26
+
+### Updated
+- Readme: rename GitHub references `fs-opensource -> futurestudio`
+
+
 ## Version [3.1.1](https://github.com/futurestudio/hapi-geo-locate/compare/v3.1.0...v3.1.1) - 2019-01-22
 
 ### Added
