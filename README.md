@@ -17,10 +17,10 @@
   <br/>
   <br/>
   <p>
-    <a href="https://travis-ci.org/futurestudio/hapi-geo-locate"><img src="https://camo.githubusercontent.com/9f56ef242c6f588f74f39f0bd61c1acd34d853af/68747470733a2f2f7472617669732d63692e6f72672f66732d6f70656e736f757263652f686170692d67656f2d6c6f636174652e7376673f6272616e63683d6d6173746572" alt="Build Status" data-canonical-src="https://travis-ci.org/futurestudio/hapi-geo-locate.svg?branch=master" style="max-width:100%;"></a>
+    <a href="https://travis-ci.org/futurestudio/hapi-geo-locate"><img src="https://travis-ci.org/futurestudio/hapi-geo-locate.svg?branch=master" alt="Build Status" data-canonical-src="https://travis-ci.org/futurestudio/hapi-geo-locate.svg?branch=master" style="max-width:100%;"></a>
     <a href="https://snyk.io/test/github/futurestudio/hapi-geo-locate"><img src="https://camo.githubusercontent.com/a3b4309f8139ab05f486dc97807b8a13fd071503/68747470733a2f2f736e796b2e696f2f746573742f6769746875622f66732d6f70656e736f757263652f686170692d67656f2d6c6f636174652f62616467652e737667" alt="Known Vulnerabilities" data-canonical-src="https://snyk.io/test/github/futurestudio/hapi-geo-locate/badge.svg" style="max-width:100%;"></a>
     <a href="https://www.npmjs.com/package/hapi-geo-locate"><img src="https://camo.githubusercontent.com/5eed05045c5bbe5ba8619779fa5cb790be4e160e/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f686170692d67656f2d6c6f636174652e737667" alt="hapi-geo-locate Version" data-canonical-src="https://img.shields.io/npm/v/hapi-geo-locate.svg" style="max-width:100%;"></a>
-    <a href="https://greenkeeper.io/" rel="nofollow"><img src="https://camo.githubusercontent.com/5bc9a900404620811777238913270ebb231ea43c/68747470733a2f2f6261646765732e677265656e6b65657065722e696f2f66732d6f70656e736f757263652f686170692d67656f2d6c6f636174652e737667" alt="Greenkeeper badge" data-canonical-src="https://badges.greenkeeper.io/futurestudio/hapi-geo-locate.svg" style="max-width:100%;"></a>
+    <a href="https://greenkeeper.io/" rel="nofollow"><img src="https://badges.greenkeeper.io/futurestudio/hapi-geo-locate.svg" alt="Greenkeeper badge" data-canonical-src="https://badges.greenkeeper.io/futurestudio/hapi-geo-locate.svg" style="max-width:100%;"></a>
   </p>
   <p>
     <em>Follow <a href="http://twitter.com/marcuspoehls">@marcuspoehls</a> for updates!</em>
