@@ -1,5 +1,12 @@
 # Changelog
 
+## Version [3.1.4](https://github.com/futurestudio/hapi-geo-locate/compare/v3.1.3...v3.1.4) - 2019-04-24
+
+### Updated
+- update to hapi scoped dependencies
+- bump dependencies
+
+
 ## Version [3.1.3](https://github.com/futurestudio/hapi-geo-locate/compare/v3.1.2...v3.1.3) - 2019-02-18
 
 ### Updated
