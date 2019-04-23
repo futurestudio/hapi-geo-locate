@@ -1,50 +1,57 @@
 {
-  "name": "hapi-geo-locate",
-  "description": "Provide IP geo location for incoming requests in hapi",
-  "version": "3.1.0",
-  "author": "Future Studio <info@futurestud.io>",
-  "bugs": {
-    "url": "https://github.com/fs-opensource/hapi-geo-locate/issues"
-  },
-  "dependencies": {
-    "ipinfo": "~1.3.9",
-    "request-ip": "~2.1.3"
-  },
-  "devDependencies": {
-    "code": "~5.2.4",
-    "eslint": "~5.12.1",
-    "eslint-config-standard": "~12.0.0",
-    "eslint-plugin-import": "~2.14.0",
-    "eslint-plugin-node": "~8.0.1",
-    "eslint-plugin-promise": "~4.0.1",
-    "eslint-plugin-standard": "~4.0.0",
-    "hapi": "~18.0.0",
-    "husky": "~1.3.1",
-    "lab": "~18.0.1"
-  },
-  "engines": {
-    "node": ">=8"
-  },
-  "homepage": "https://github.com/fs-opensource/hapi-geo-locate#readme",
-  "keywords": [
-    "hapi",
-    "hapijs",
-    "plugin",
-    "geo",
-    "location",
-    "geo-location",
-    "ipLocation",
-    "IP location"
-  ],
-  "license": "MIT",
-  "main": "lib/index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/fs-opensource/hapi-geo-locate.git"
-  },
-  "scripts": {
-    "test": "lab --assert code --leaks --coverage --lint",
-    "list-tests": "lab -dv",
-    "test-single": "lab --assert code --leaks --coverage --lint --id"
-  }
+    "name": "hapi-geo-locate",
+    "description": "Provide IP geo location for incoming requests in hapi",
+    "version": "3.1.0",
+    "author": "Future Studio <info@futurestud.io>",
+    "bugs": {
+        "url": "https://github.com/fs-opensource/hapi-geo-locate/issues"
+    },
+    "contributors": [
+        {
+            "name": "Marcus Poehls",
+            "email": "marcus@futurestud.io"
+        }
+    ],
+    "dependencies": {
+        "ipinfo": "~1.3.9",
+        "request-ip": "~2.1.3"
+    },
+    "devDependencies": {
+        "@hapi/code": "5.3.1",
+        "@hapi/hapi": "18.3.1",
+        "@hapi/lab": "18.1.1",
+        "eslint": "~5.16.0",
+        "eslint-config-standard": "~12.0.0",
+        "eslint-plugin-import": "~2.17.2",
+        "eslint-plugin-node": "~8.0.1",
+        "eslint-plugin-promise": "~4.1.1",
+        "eslint-plugin-standard": "~4.0.0",
+        "husky": "~1.3.1"
+    },
+    "engines": {
+        "node": ">=8"
+    },
+    "homepage": "https://github.com/fs-opensource/hapi-geo-locate#readme",
+    "keywords": [
+        "IP location",
+        "geo",
+        "geo-location",
+        "hapi",
+        "hapijs",
+        "ipLocation",
+        "location",
+        "plugin"
+    ],
+    "license": "MIT",
+    "main": "lib/index.js",
+    "peerDependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/fs-opensource/hapi-geo-locate.git"
+    },
+    "scripts": {
+        "list-tests": "lab -dv",
+        "test": "lab --assert @hapi/code --leaks --coverage --lint",
+        "test-single": "lab --assert @hapi/code --leaks --coverage --lint --id"
+    }
 }
