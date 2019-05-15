@@ -4,7 +4,7 @@
     "version": "3.1.4",
     "author": "Future Studio <info@futurestud.io>",
     "bugs": {
-        "url": "https://github.com/fs-opensource/hapi-geo-locate/issues"
+        "url": "https://github.com/futurestudio/hapi-geo-locate/issues"
     },
     "contributors": [
         {
@@ -31,7 +31,7 @@
     "engines": {
         "node": ">=8"
     },
-    "homepage": "https://github.com/fs-opensource/hapi-geo-locate#readme",
+    "homepage": "https://github.com/futurestudio/hapi-geo-locate#readme",
     "keywords": [
         "IP location",
         "geo",
@@ -47,7 +47,7 @@
     "peerDependencies": {},
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/fs-opensource/hapi-geo-locate.git"
+        "url": "git+https://github.com/futurestudio/hapi-geo-locate.git"
     },
     "scripts": {
         "list-tests": "lab -dv",
