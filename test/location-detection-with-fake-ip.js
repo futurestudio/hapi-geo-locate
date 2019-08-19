@@ -8,6 +8,7 @@ const server = new Hapi.Server()
 
 const lab = (exports.lab = Lab.script())
 const { experiment, it, before } = lab
+const { expect } = Code
 
 experiment('hapi-geo-locate detect client location with fake IP address', () => {
   before(async () => {
@@ -38,12 +39,9 @@ experiment('hapi-geo-locate detect client location with fake IP address', () => 
     }
 
     const response = await server.inject(request)
-    const payload = JSON.parse(response.payload || '{}')
-
-    Code.expect(response.statusCode).to.equal(200)
-    Code.expect(Object.keys(payload)).to.contain(['ip'])
-    Code.expect(Object.keys(payload)).to.contain(['hostname'])
-    Code.expect(payload.ip).to.equal('8.8.8.8')
+    expect(response.statusCode).to.equal(200)
+    expect(response.result.ip).to.equal('8.8.8.8')
+    expect(Object.keys(response.result)).to.contain(['hostname'])
   })
 
   it('works without a fake IP address', async () => {
@@ -66,11 +64,7 @@ experiment('hapi-geo-locate detect client location with fake IP address', () => 
     }
 
     const response = await server.inject(request)
-    const payload = JSON.parse(response.payload || '{}')
-
-    Code.expect(response.statusCode).to.equal(200)
-    Code.expect(Object.keys(payload)).to.contain(['ip'])
-    Code.expect(Object.keys(payload)).to.contain(['bogon'])
-    Code.expect(payload.ip).to.equal('127.0.0.1')
+    expect(response.statusCode).to.equal(200)
+    expect(response.result.ip).to.equal('127.0.0.1')
   })
 })

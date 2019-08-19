@@ -35,11 +35,8 @@ experiment('hapi-geo-locate detect client location with proxied request (x-forwa
     }
 
     const response = await server.inject(request)
-    const payload = JSON.parse(response.payload || '{}')
-
     Code.expect(response.statusCode).to.equal(200)
-    Code.expect(Object.keys(payload)).to.contain(['ip'])
-    Code.expect(payload.ip).to.equal('127.0.0.1')
+    Code.expect(response.result.ip).to.equal('127.0.0.1')
   })
 
   it('proxies a request through a single proxy header', async () => {
@@ -59,12 +56,9 @@ experiment('hapi-geo-locate detect client location with proxied request (x-forwa
     }
 
     const response = await server.inject(request)
-    const payload = JSON.parse(response.payload || '{}')
-
     Code.expect(response.statusCode).to.equal(200)
-    Code.expect(Object.keys(payload)).to.contain(['ip'])
-    Code.expect(Object.keys(payload)).to.contain(['hostname'])
-    Code.expect(payload.ip).to.equal('8.8.8.8')
+    Code.expect(response.result.ip).to.equal('8.8.8.8')
+    Code.expect(Object.keys(response.result)).to.contain(['hostname'])
   })
 
   it('proxies a request through multiple proxies', async () => {
@@ -84,11 +78,9 @@ experiment('hapi-geo-locate detect client location with proxied request (x-forwa
     }
 
     const response = await server.inject(request)
-    const payload = JSON.parse(response.payload || '{}')
-
     Code.expect(response.statusCode).to.equal(200)
-    Code.expect(payload.ip).to.exist()
-    Code.expect(payload.ip).to.equal('8.8.8.8')
-    Code.expect(payload.city).to.exist()
+    Code.expect(response.result.ip).to.exist()
+    Code.expect(response.result.ip).to.equal('8.8.8.8')
+    Code.expect(response.result.city).to.exist()
   })
 })

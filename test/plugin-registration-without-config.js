@@ -31,10 +31,8 @@ experiment('hapi-geo-locate register plugin without config', () => {
     }
 
     const response = await server.inject(request)
-    const payload = JSON.parse(response.payload || '{}')
-
     Code.expect(response.statusCode).to.equal(200)
-    Code.expect(Object.keys(payload)).to.contain(['ip'])
+    Code.expect(Object.keys(response.result)).to.contain(['ip'])
   })
 
   it('disables the plugin on a route', async () => {
@@ -55,9 +53,7 @@ experiment('hapi-geo-locate register plugin without config', () => {
     }
 
     const response = await server.inject(request)
-    const payload = JSON.parse(response.payload || '{}')
-
     Code.expect(response.statusCode).to.equal(200)
-    Code.expect(payload).to.be.empty()
+    Code.expect(response.result).to.be.empty()
   })
 })
