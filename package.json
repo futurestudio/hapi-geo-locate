@@ -20,7 +20,7 @@
         "@hapi/code": "6.0.0",
         "@hapi/hapi": "18.3.2",
         "@hapi/lab": "20.2.1",
-        "eslint": "~6.2.1",
+        "eslint": "~6.3.0",
         "eslint-config-standard": "~14.0.0",
         "eslint-plugin-import": "~2.18.2",
         "eslint-plugin-node": "~9.1.0",
