@@ -17,7 +17,7 @@ experiment('hapi-geo-locate detect client location with fake IP address', () => 
     })
   })
 
-  it('works with a fake IP address', async () => {
+  it('works with a fake IP address', { timeout: 10000 }, async () => {
     const routeOptions = {
       path: '/with-fake-ip',
       method: 'GET',
@@ -44,7 +44,7 @@ experiment('hapi-geo-locate detect client location with fake IP address', () => 
     expect(Object.keys(response.result)).to.contain(['hostname'])
   })
 
-  it('works without a fake IP address', async () => {
+  it('works without a fake IP address', { timeout: 10000 }, async () => {
     const routeOptions = {
       path: '/with-empty-fake-ip',
       method: 'GET',
