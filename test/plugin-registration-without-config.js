@@ -16,7 +16,7 @@ experiment('hapi-geo-locate register plugin without config', () => {
     })
   })
 
-  it('works without any options', async () => {
+  it('works without any options', { timeout: 10000 }, async () => {
     const routeOptions = {
       path: '/no-options',
       method: 'GET',
@@ -35,7 +35,7 @@ experiment('hapi-geo-locate register plugin without config', () => {
     Code.expect(Object.keys(response.result)).to.contain(['ip'])
   })
 
-  it('disables the plugin on a route', async () => {
+  it('disables the plugin on a route', { timeout: 10000 }, async () => {
     const routeOptions = {
       path: '/with-options',
       method: 'GET',

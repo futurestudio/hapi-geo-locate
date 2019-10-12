@@ -19,7 +19,7 @@ experiment('hapi-geo-locate detect client location with proxied request (x-forwa
     })
   })
 
-  it('proxies a request through a single, empty proxy header', async () => {
+  it('proxies a request through a single, empty proxy header', { timeout: 10000 }, async () => {
     const routeOptions = {
       path: '/no-proxy',
       method: 'GET',
@@ -39,7 +39,7 @@ experiment('hapi-geo-locate detect client location with proxied request (x-forwa
     Code.expect(response.result.ip).to.equal('127.0.0.1')
   })
 
-  it('proxies a request through a single proxy header', async () => {
+  it('proxies a request through a single proxy header', { timeout: 10000 }, async () => {
     const routeOptions = {
       path: '/single-proxy',
       method: 'GET',
@@ -61,7 +61,7 @@ experiment('hapi-geo-locate detect client location with proxied request (x-forwa
     Code.expect(Object.keys(response.result)).to.contain(['hostname'])
   })
 
-  it('proxies a request through multiple proxies', async () => {
+  it('proxies a request through multiple proxies', { timeout: 10000 }, async () => {
     const routeOptions = {
       path: '/multiple-proxies',
       method: 'GET',

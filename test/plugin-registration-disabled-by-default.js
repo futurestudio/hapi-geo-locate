@@ -39,7 +39,7 @@ experiment('hapi-geo-locate register plugin disabled by default', () => {
     Code.expect(Object.keys(response.result)).to.be.empty()
   })
 
-  it('locates the request when enabled on a route', async () => {
+  it('locates the request when enabled on a route', { timeout: 10000 }, async () => {
     const routeOptions = {
       path: '/with-options',
       method: 'GET',
