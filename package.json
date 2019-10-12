@@ -18,15 +18,15 @@
     },
     "devDependencies": {
         "@hapi/code": "6.0.0",
-        "@hapi/hapi": "18.3.2",
-        "@hapi/lab": "20.3.2",
+        "@hapi/hapi": "18.4.0",
+        "@hapi/lab": "20.4.0",
         "eslint": "~6.5.1",
         "eslint-config-standard": "~14.1.0",
         "eslint-plugin-import": "~2.18.2",
         "eslint-plugin-node": "~10.0.0",
         "eslint-plugin-promise": "~4.2.1",
         "eslint-plugin-standard": "~4.0.1",
-        "husky": "~3.0.4"
+        "husky": "~3.0.8"
     },
     "engines": {
         "node": ">=8"
