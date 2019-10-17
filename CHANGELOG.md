@@ -1,5 +1,11 @@
 # Changelog
 
+## Version [3.2.0](https://github.com/futurestudio/hapi-geo-locate/compare/v3.1.5...v3.2.0) - 2019-10-17
+
+### Added
+- basic TypeScript declarations in `lib/index.d.ts`
+
+
 ## Version [3.1.5](https://github.com/futurestudio/hapi-geo-locate/compare/v3.1.4...v3.1.5) - 2019-10-12
 
 ### Updated
