@@ -1,5 +1,12 @@
 # Changelog
 
+## Version [4.0.0](https://github.com/futurestudio/hapi-geo-locate/compare/v3.2.0...v4.0.0) - 2020-xx-xx
+
+### Breaking Changes
+- require hapi v19
+- require Node.js v12
+
+
 ## Version [3.2.0](https://github.com/futurestudio/hapi-geo-locate/compare/v3.1.5...v3.2.0) - 2019-10-17
 
 ### Added

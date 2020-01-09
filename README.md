@@ -42,24 +42,40 @@ A hapi plugin to geo locate requests by IP and provide `request.location` in you
 
 
 ## Requirements
-The plugin supports hapi `17.x` and later, uses async/await and requires **Node.js v8 or later**.
+> **hapi v19 (or later)** and **Node.js v12 (or newer)**
+
+This plugin requires **hapi v19** (or later) and **Node.js v12 or newer**.
+
+
+### Compatibility
+| Major Release | [hapi.js](https://github.com/hapijs/hapi) version | Node.js version |
+| --- | --- | --- |
+| `v4` | `>=19 @hapi/hapi` | `>=12` |
+| `v3` | `>=17 hapi` | `>=8` |
+| `v2` | `<=16 hapi` | `>=8` |
 
 
 ## Installation
 Add `hapi-geo-locate` as a dependency to your project:
 
 ```bash
-npm i -S hapi-geo-locate
-# you’re using NPM shortcuts to (i)nstall and (-S)ave the module as a dependency
+npm i hapi-geo-locate
+```
+
+
+### Using hapi v17 or v18?
+Use the `3.x` release line:
+
+```bash
+npm i hapi-geo-locate@3
 ```
 
 
 ### Do you use hapi v16 (or lower)?
-Use the `2.2.1` release of `hapi-geo-locate` with hapi v16. Later versions are only compatible with hapi v17.
+Use the `2.x` release of `hapi-geo-locate` with hapi v16 support. Later versions are only compatible with hapi v17 and v18.
 
 ```bash
-npm i -S hapi-geo-locate@2.2.1
-# you’re using NPM shortcuts to (i)nstall and (-S)ave the module as a dependency
+npm i hapi-geo-locate@2
 ```
 
 
