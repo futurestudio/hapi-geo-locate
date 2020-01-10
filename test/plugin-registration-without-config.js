@@ -39,7 +39,7 @@ experiment('hapi-geo-locate register plugin without config', () => {
     const routeOptions = {
       path: '/with-options',
       method: 'GET',
-      handler: request => request.location || '',
+      handler: request => request.location || 'no-location',
       config: {
         plugins: { 'hapi-geo-locate': { enabled: false } }
       }
@@ -54,6 +54,6 @@ experiment('hapi-geo-locate register plugin without config', () => {
 
     const response = await server.inject(request)
     Code.expect(response.statusCode).to.equal(200)
-    Code.expect(response.result).to.be.empty()
+    Code.expect(response.result).to.equal('no-location')
   })
 })
