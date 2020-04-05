@@ -108,12 +108,14 @@ server.route({
 The following plugin options allow you to customize the default behavior of `hapi-geo-locate`:
 
 - **enabledByDefault**: `(boolean)`, default: `true` — by default, the plugin geo locates the request by IP on every request
+- **authToken**: `(string)`, no default — the API token to authenticate requests against the IPinfo API
 
 ```js
 await server.register({
   plugin: require('hapi-geo-locate'),
   options: {
     enabledByDefault: false
+    authToken: 'your-ipinfo-api-token'
   }
 })
 
