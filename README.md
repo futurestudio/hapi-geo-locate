@@ -21,7 +21,6 @@
     <a href="https://snyk.io/test/github/futurestudio/hapi-geo-locate"><img src="https://snyk.io/test/github/futurestudio/hapi-geo-locate/badge.svg" alt="Known Vulnerabilities"></a>
     <a href="https://www.npmjs.com/package/hapi-geo-locate"><img src="https://img.shields.io/npm/v/hapi-geo-locate.svg" alt="Latest Version"></a>
     <a href="https://www.npmjs.com/package/hapi-geo-locate"><img src="https://img.shields.io/npm/dm/hapi-geo-locate.svg" alt="Total Downloads"></a>
-    <a href="https://greenkeeper.io/" rel="nofollow"><img src="https://badges.greenkeeper.io/futurestudio/hapi-geo-locate.svg" alt="Greenkeeper badge" data-canonical-src="https://badges.greenkeeper.io/futurestudio/hapi-geo-locate.svg" style="max-width:100%;"></a>
   </p>
   <p>
     <em>Follow <a href="http://twitter.com/marcuspoehls">@marcuspoehls</a> for updates!</em>
