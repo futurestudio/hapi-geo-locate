@@ -1,5 +1,15 @@
 # Changelog
 
+## Version [4.1.0](https://github.com/futurestudio/hapi-geo-locate/compare/v4.0.0...v4.1.0) - 2020-04-xx
+
+### Added
+- new plugin option: `authToken`
+  - the `authToken` option represents the IPinfo API token to authenticate requests
+
+### Updated
+- bump dependencies
+
+
 ## Version [4.0.0](https://github.com/futurestudio/hapi-geo-locate/compare/v3.2.0...v4.0.0) - 2020-01-10
 
 ### Breaking Changes
