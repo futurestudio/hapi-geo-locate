@@ -1,6 +1,15 @@
 # Changelog
 
-## Version [4.1.0](https://github.com/futurestudio/hapi-geo-locate/compare/v4.0.0...v4.1.0) - 2020-04-xx
+
+## Version [4.1.1](https://github.com/futurestudio/hapi-geo-locate/compare/v4.1.0...v4.1.1) - 2020-08-05
+
+### Updated
+- bump dependencies
+- test against Node.js v14
+- replaced `request-ip` dependency with `@supercharge/request-ip` improving request IP detection
+
+
+## Version [4.1.0](https://github.com/futurestudio/hapi-geo-locate/compare/v4.0.0...v4.1.0) - 2020-04-05
 
 ### Added
 - new plugin option: `authToken`
