@@ -8,7 +8,7 @@
     },
     "dependencies": {
         "@supercharge/request-ip": "~1.0.0",
-        "ipinfo": "~1.3.9"
+        "ipinfo": "~1.5.0"
     },
     "devDependencies": {
         "@hapi/code": "8.0.2",
