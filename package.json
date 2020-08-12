@@ -7,7 +7,7 @@
         "url": "https://github.com/futurestudio/hapi-geo-locate/issues"
     },
     "dependencies": {
-        "@supercharge/request-ip": "~1.0.0",
+        "@supercharge/request-ip": "~1.1.1",
         "ipinfo": "~1.5.0"
     },
     "devDependencies": {
