@@ -13,7 +13,7 @@
     "devDependencies": {
         "@hapi/code": "8.0.3",
         "@hapi/hapi": "20.1.5",
-        "@hapi/lab": "24.2.1",
+        "@hapi/lab": "24.3.0",
         "eslint": "~7.30.0",
         "eslint-config-standard": "~16.0.1",
         "eslint-plugin-import": "~2.23.4",
