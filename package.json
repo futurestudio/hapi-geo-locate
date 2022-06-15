@@ -11,7 +11,7 @@
         "ipinfo": "~1.5.0"
     },
     "devDependencies": {
-        "@hapi/code": "9.0.0",
+        "@hapi/code": "9.0.1",
         "@hapi/hapi": "20.2.2",
         "@hapi/lab": "25.0.1",
         "eslint": "~7.32.0",
