@@ -14,7 +14,7 @@
         "@hapi/code": "9.0.3",
         "@hapi/hapi": "21.2.1",
         "@hapi/code": "9.0.3",
-        "@hapi/hapi": "21.4.2",
+        "@hapi/hapi": "21.4.3",
         "@hapi/lab": "26.0.0",
         "eslint": "~9.33.0",
         "eslint-config-standard": "~17.1.0",
